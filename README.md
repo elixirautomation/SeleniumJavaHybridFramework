@@ -1,2 +1,2 @@
-# SeleniumHybridFramework
-Selenium Hybrid Framework Development
+# Selenium Java Hybrid Framework
+Selenium Hybrid Framework Development with Java
