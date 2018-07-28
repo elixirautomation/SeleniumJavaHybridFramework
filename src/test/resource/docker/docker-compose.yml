@@ -1,0 +1,50 @@
+jenkins:
+  image: jenkinsci/blueocean
+  ports:
+  - 8080:8080
+
+selenium_hub:
+  image: selenium/hub
+  ports:
+    - 8888:4444
+  privileged: true
+  environment:
+    - GRID_BROWSER_TIMEOUT=60000
+    - GRID_TIMEOUT=30000
+    - GRID_MAX_SESSION=2
+
+firefox_debug_node:
+  image: selenium/node-firefox-debug
+  ports: 
+    - 32771:5900
+  environment:
+  - NODE_MAX_INSTANCES=2
+  - NODE_MAX_SESSION=2
+  links:
+    - selenium_hub:hub
+
+chrome_debug_node:
+  image: selenium/node-chrome-debug
+  ports: 
+    - 32770:5900
+  environment:
+  - NODE_MAX_INSTANCES=2
+  - NODE_MAX_SESSION=2
+  links:
+    - selenium_hub:hub
+    
+firefox_node:
+  image: selenium/node-firefox
+  environment:
+    - NODE_MAX_INSTANCES=2
+    - NODE_MAX_SESSION=2
+  links:
+    - selenium_hub:hub
+           
+chrome_node:
+  image: selenium/node-chrome
+  environment:
+    - NODE_MAX_INSTANCES=2
+    - NODE_MAX_SESSION=2
+  links:
+    - selenium_hub:hub 
