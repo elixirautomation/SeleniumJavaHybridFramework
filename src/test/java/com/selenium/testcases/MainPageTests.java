@@ -95,7 +95,7 @@ public class MainPageTests extends TestBase {
     public void getResult(ITestResult result) throws Exception{
 
         if(result.getStatus() == ITestResult.FAILURE){
-            String screenShotPath = ReusableFunctions.takeScreenShot(driver, "SonetelTestScreen");
+            String screenShotPath = ReusableFunctions.takeScreenShot(driver, "SeleniumTestScreen");
             logger.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+" Test case FAILED due to below issues:", ExtentColor.RED));
             logger.fail(result.getThrowable());
             logger.fail("Snapshot below: " + logger.addScreenCaptureFromPath(screenShotPath, testCaseName));

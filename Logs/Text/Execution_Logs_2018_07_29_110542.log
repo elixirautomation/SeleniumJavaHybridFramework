@@ -1,0 +1,28 @@
+2018-07-29 23:05:43 INFO  TestBase:58 - Starting tests on chrome browser.
+2018-07-29 23:05:48 INFO  TestBase:111 - Driver initialization completed.
+2018-07-29 23:05:48 INFO  MainPage:29 - Verifying Main Page Elements.
+2018-07-29 23:05:48 INFO  ReusableFunctions:60 - [[ChromeDriver: chrome on XP (f4a358f8314157ea813088faa404d027)] -> xpath: //input[@id='user-message']]: element is displayed.
+2018-07-29 23:05:49 INFO  ReusableFunctions:60 - [[ChromeDriver: chrome on XP (f4a358f8314157ea813088faa404d027)] -> xpath: //button[text()='Show Message']]: element is displayed.
+2018-07-29 23:05:49 INFO  ReusableFunctions:60 - [[ChromeDriver: chrome on XP (f4a358f8314157ea813088faa404d027)] -> xpath: //input[@id='sum1']]: element is displayed.
+2018-07-29 23:05:49 INFO  ReusableFunctions:60 - [[ChromeDriver: chrome on XP (f4a358f8314157ea813088faa404d027)] -> xpath: //input[@id='sum2']]: element is displayed.
+2018-07-29 23:05:49 INFO  ReusableFunctions:60 - [[ChromeDriver: chrome on XP (f4a358f8314157ea813088faa404d027)] -> xpath: //button[text()='Get Total']]: element is displayed.
+2018-07-29 23:05:49 INFO  MainPage:39 - All Main Page Elements Displayed.
+2018-07-29 23:05:49 INFO  TestBase:58 - Starting tests on chrome browser.
+2018-07-29 23:05:53 INFO  TestBase:111 - Driver initialization completed.
+2018-07-29 23:05:53 INFO  MainPage:56 - Verifying Valid User Input.
+2018-07-29 23:05:54 INFO  ReusableFunctions:158 - Actual Text From Application Web UI --> :: Welcome Selenium Learner
+2018-07-29 23:05:54 INFO  ReusableFunctions:159 - Expected Text From Application Web UI --> :: Welcome Selenium Learner
+2018-07-29 23:05:54 INFO  ReusableFunctions:162 - ### VERIFICATION TEXT MATCHED !!!
+2018-07-29 23:05:54 INFO  TestBase:58 - Starting tests on chrome browser.
+2018-07-29 23:05:59 INFO  TestBase:111 - Driver initialization completed.
+2018-07-29 23:05:59 INFO  MainPage:76 - Verifying Addition Functionality.
+2018-07-29 23:05:59 INFO  ReusableFunctions:158 - Actual Text From Application Web UI --> :: 15
+2018-07-29 23:05:59 INFO  ReusableFunctions:159 - Expected Text From Application Web UI --> :: 15
+2018-07-29 23:05:59 INFO  ReusableFunctions:162 - ### VERIFICATION TEXT MATCHED !!!
+2018-07-29 23:05:59 INFO  TestBase:58 - Starting tests on chrome browser.
+2018-07-29 23:06:04 INFO  TestBase:111 - Driver initialization completed.
+2018-07-29 23:06:04 INFO  MainPage:76 - Verifying Addition Functionality.
+2018-07-29 23:06:04 INFO  ReusableFunctions:158 - Actual Text From Application Web UI --> :: 11
+2018-07-29 23:06:04 INFO  ReusableFunctions:159 - Expected Text From Application Web UI --> :: 12
+2018-07-29 23:06:04 ERROR ReusableFunctions:165 - ### VERIFICATION TEXT DOES NOT MATCHED !!!
+2018-07-29 23:06:05 INFO  ReusableFunctions:146 - Saving screenshot to failed repo: C:\Users\abhilash.sharma\Desktop\Github Pages\SeleniumJavaHybridFramework\Screenshots\SeleniumTestScreen20180729110604.png
