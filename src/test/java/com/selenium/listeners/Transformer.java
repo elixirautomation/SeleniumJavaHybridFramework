@@ -10,15 +10,9 @@ import org.testng.IAnnotationTransformer;
 import org.testng.annotations.ITestAnnotation;
 
 public class Transformer implements IAnnotationTransformer {
-    public static DataReader reader = new DataReader();
-    public static TestBase testBase = new TestBase();
-    public static HashMap<String, HashMap<String, String>> runmodeData = reader.testDataMappedToTestName(testBase.prop.getProperty("TestDataExcelFileName"), testBase.prop.getProperty("RunModeSheetName"));
+    public static HashMap<String, HashMap<String, String>> runmodeData = DataReader.testDataMappedToTestName(TestBase.prop.getProperty("TestDataExcelFileName"), TestBase.prop.getProperty("RunModeSheetName"));
 
     public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
-        if (DataReader.isRunnable(testMethod.getName(), runmodeData)) {
-            annotation.setEnabled(true);
-        }else if (! DataReader.isRunnable(testMethod.getName(), runmodeData)) {
-            annotation.setEnabled(false);
-        }
+            annotation.setEnabled(DataReader.isRunnable(testMethod.getName(), runmodeData));
     }
 }
