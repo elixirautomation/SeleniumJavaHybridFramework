@@ -27,8 +27,6 @@ public class MainPageTests extends TestBase {
     public static ExtentManager extManager = null;
     public static ExtentReports extent = null;
 
-    public static DataReader reader = new DataReader();
-
     public static HashMap<String, HashMap<String, String>> tcData = DataReader.testDataMappedToTestName(prop.getProperty("TestDataExcelFileName"), prop.getProperty("TestDataSheetName"));
 
     public MainPageTests(){
