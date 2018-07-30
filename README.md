@@ -1,6 +1,6 @@
 # Selenium Java Hybrid Framework
 
-##Selenium Hybrid Framework Development with Java
+### Framework Contents:
 - Page Object Model
 - Extent Reporting
 - Data Driven (Apache POI)
@@ -8,7 +8,7 @@
 - Maven Project (No external jar files needs to be added)
 - Log4j with html and text logs
 
-##Initial Setup: 
+### Initial Setup: 
 - Install and configure [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 
 - Install and configure [Maven](https://maven.apache.org/download.cgi)
 - Setup your IDE (Preferably [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows))
