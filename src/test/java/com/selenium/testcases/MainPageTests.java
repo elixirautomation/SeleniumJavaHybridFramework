@@ -13,7 +13,6 @@ import com.selenium.util.ReusableFunctions;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
-
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -30,7 +29,7 @@ public class MainPageTests extends TestBase {
 
     public static DataReader reader = new DataReader();
 
-    public static HashMap<String, HashMap<String, String>> tcData = reader.testDataMappedToTestName(prop.getProperty("TestDataExcelFileName"), prop.getProperty("TestDataSheetName"));
+    public static HashMap<String, HashMap<String, String>> tcData = DataReader.testDataMappedToTestName(prop.getProperty("TestDataExcelFileName"), prop.getProperty("TestDataSheetName"));
 
     public MainPageTests(){
         super();
@@ -44,8 +43,8 @@ public class MainPageTests extends TestBase {
 
         testCaseName = method.getName();
         extManager = new ExtentManager(extent);
-        extent = extManager.getReporter();
-        logger = extManager.getLogger(testCaseName);
+        extent = ExtentManager.getReporter();
+        logger = ExtentManager.getLogger(testCaseName);
     }
 
     @Test(priority = 1)

@@ -17,7 +17,7 @@ public class ExtentManager {
     private static ExtentTest logger;
 
     public ExtentManager(ExtentReports reports){
-        this.extent = reports;
+        extent = reports;
     }
 
     public synchronized static ExtentReports getReporter() throws IOException {

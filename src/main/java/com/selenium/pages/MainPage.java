@@ -58,10 +58,7 @@ public class MainPage extends TestBase {
             _reusableFunc.enterText(driver, user_message_input, userInput);
             _reusableFunc.click(driver, show_message_button);
             String message = _reusableFunc.getTextByInnerText(driver, show_message_text);
-
-            if (_reusableFunc.verifyTextMatch(driver, message, userInput)){
-                flag = true;
-            }
+            flag = ReusableFunctions.verifyTextMatch(driver, message, userInput);
 
         }catch(Exception Ex){
             logger.error("Exception Occurred While Verifying Valid User Input: "+Ex.getMessage());
@@ -79,10 +76,7 @@ public class MainPage extends TestBase {
             _reusableFunc.enterText(driver, enter_second_value, numB);
             _reusableFunc.click(driver, get_total_button);
             String addition = _reusableFunc.getTextByInnerText(driver, show_total_text);
-
-            if (_reusableFunc.verifyTextMatch(driver, addition, expected)){
-                flag = true;
-            }
+           flag = ReusableFunctions.verifyTextMatch(driver, addition, expected);
 
         }catch(Exception Ex){
             logger.error("Exception Occurred While Verifying Addition Functionality: "+Ex.getMessage());
