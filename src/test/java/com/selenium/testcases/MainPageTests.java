@@ -107,7 +107,7 @@ public class MainPageTests extends TestBase {
 
         if (driver != null) {
             driver.manage().deleteAllCookies();
-            driver.close();
+            driver.quit();
         }
     }
     @AfterTest

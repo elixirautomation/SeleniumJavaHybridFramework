@@ -20,7 +20,7 @@ public class ReusableFunctions extends TestBase {
 
     public int timeoutValue(){
         try{
-           timeout = Integer.parseInt(prop.getProperty("TIMEOUT"));
+           timeout = Integer.parseInt(prop.getProperty("Timeout"));
         }catch (Exception Ex) {
             logger.error("Exception Occurred While Getting Timeout Property.");
         }

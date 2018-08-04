@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.FileInputStream;
@@ -47,8 +48,8 @@ public class TestBase {
     }
 
     public static void initialization() throws MalformedURLException {
-        String browserName = prop.getProperty("BROWSER");
-        String environment = prop.getProperty("ENVIRONMENT");
+        String browserName = prop.getProperty("Browser");
+        String environment = prop.getProperty("Environment");
 
         switch (environment) {
 
@@ -83,7 +84,7 @@ public class TestBase {
                         options.addArguments("--start-maximized");
                         options.addArguments("--disable-extensions");
                         options.setCapability("platform", "LINUX");
-                        driver = new RemoteWebDriver(new URL(prop.getProperty("SELENIUMSERVER")), options);
+                        driver = new RemoteWebDriver(new URL(prop.getProperty("GridServer")), options);
                         logger.info("Setting Up Selenium Grid.");
                         break;
 
@@ -99,14 +100,37 @@ public class TestBase {
                 }
                 break;
 
+
+            case "browser_stack":
+                String username = prop.getProperty("bs_username");
+                String automate_key = prop.getProperty("bs_key");
+                String url = "http://" + username + ":" + automate_key + "@hub.browserstack.com:80/wd/hub";
+
+                DesiredCapabilities caps = new DesiredCapabilities();
+
+                caps.setCapability("browser", prop.getProperty("browser"));
+                caps.setCapability("browser_version", prop.getProperty("browser_version"));
+                caps.setCapability("os", prop.getProperty("os"));
+                caps.setCapability("os_version", prop.getProperty("os_version"));
+                caps.setCapability("resolution", prop.getProperty("resolution"));
+                caps.setCapability("project", prop.getProperty("project"));
+                caps.setCapability("name", prop.getProperty("name"));
+                caps.setCapability("browserstack.debug", prop.getProperty("browserstack.debug"));
+                caps.setCapability("browserstack.networkLogs", prop.getProperty("browserstack.networkLogs"));
+
+                driver = new RemoteWebDriver(new URL(url), caps);
+
+                logger.info("Setting Up Browser Stack Grid.");
+                break;
+
             default:
                 logger.info("No environment defined.");
                 break;
         }
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Long.parseLong(prop.getProperty("TIMEOUT")), TimeUnit.SECONDS);
-        driver.get(prop.getProperty("URL"));
+        driver.manage().timeouts().pageLoadTimeout(Long.parseLong(prop.getProperty("Timeout")), TimeUnit.SECONDS);
+        driver.get(prop.getProperty("Url"));
 
         logger.info("Driver initialization completed.");
     }

@@ -137,8 +137,8 @@ public class DataReader extends TestBase {
             int totalRows = getRowCount(worksheet);
 
             // Get All Test Case with RunMode 'Y'
-            int TC_ID_Index = getColumnIndex(prop.getProperty("TC_ID_COLUMN"), worksheet);
-            int RunMode_Index = getColumnIndex(prop.getProperty("RUNMODE_COLUMN"), worksheet);
+            int TC_ID_Index = getColumnIndex(prop.getProperty("TCIDColumn"), worksheet);
+            int RunMode_Index = getColumnIndex(prop.getProperty("RunmodeColumn"), worksheet);
 
             for (int i = 1; i < totalRows; i++) {
                 String runModeValue = getCellData(i, RunMode_Index, worksheet);
@@ -205,7 +205,7 @@ public class DataReader extends TestBase {
     public static Boolean isRunnable(String testCaseName, HashMap<String, HashMap<String, String>> testData){
         Boolean flag = true;
         try{
-            String runmodeValue = testData.get(testCaseName).get(prop.getProperty("RUNMODE_COLUMN"));
+            String runmodeValue = testData.get(testCaseName).get(prop.getProperty("RunmodeColumn"));
 
             if (runmodeValue.equalsIgnoreCase("N")){
                 flag = false;

@@ -1,3 +1,5 @@
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=SldHVXJkeU9TWGRGSjhmeDJiWWkzbEZKL0ZVcDkwWkhNenJrVURKdW5BMD0tLWt0QU84L3FEejQyakNWRHBEdHZLYmc9PQ==--5f31a2970efec5adf963e507292aaf402f22eb23)](https://www.browserstack.com/automate/public-build/SldHVXJkeU9TWGRGSjhmeDJiWWkzbEZKL0ZVcDkwWkhNenJrVURKdW5BMD0tLWt0QU84L3FEejQyakNWRHBEdHZLYmc9PQ==--5f31a2970efec5adf963e507292aaf402f22eb23)
+
 # Selenium Java Hybrid Framework
 
 ### Framework Contents:
